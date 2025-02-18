@@ -348,7 +348,7 @@ Your mission, should you choose to review it:
 ```javascript
 class BackendDeveloper {
     constructor() {
-        this.name = "Ansh Chaudhary";
+        this.name = "Pranshu Chourasia";
         this.role = "Backend Hero";
         this.powerLevel = "Over 9000";
         this.caffeine = Infinity;
@@ -413,9 +413,9 @@ console.log("Mission Status:", "Ready to Code! 🚀");
 
 ## 👤 Contact Information
 
-- **Name**: Ansh Chaudhary
-- **Email**: [Your Email]
-- **LinkedIn**: [Your Profile]
+- **Name**: Pranshu Chourasia
+- **Email**: rishukrchaurasia007@gmail.com
+- **LinkedIn**: [Pranshu Chourasia](https://www.linkedin.com/in/pranshu-chourasia-615428275/)
 - **GitHub**: [anshc022](https://github.com/anshc022)
 - **Portfolio Status**: 
 ```javascript
@@ -427,8 +427,8 @@ try {
         as this API, you can check out my work in action:
         
         → This project itself (a living portfolio piece!)
-        → My GitHub repositories
-        → My practical problem-solving approach
+        → My GitHub: github.com/anshc022
+        → My LinkedIn: linkedin.com/in/pranshu-chourasia-615428275
         
         Status: Building something awesome() 
         ETA: Coming soon™
