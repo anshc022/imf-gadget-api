@@ -4,7 +4,28 @@
 [![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://semver.org)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
+📚 **API Documentation**: [Swagger UI](https://imf-gadget-api-ue70.onrender.com/api-docs/)
+
 A sophisticated REST API for managing Mission: Impossible Force's gadget inventory system. Track, maintain, and control high-tech mission equipment with detailed specifications and maintenance schedules.
+
+## 🔄 System Flow
+
+```mermaid
+graph TD
+    A[Client] -->|Authentication| B(JWT Token)
+    B --> C{Authorized?}
+    C -->|Yes| D[Access Granted]
+    C -->|No| E[Access Denied]
+    D --> F[Gadget Operations]
+    F --> G[Create]
+    F --> H[Read]
+    F --> I[Update]
+    F --> J[Delete]
+    F --> K[Maintenance]
+    F --> L[Self-Destruct]
+    G & H & I & J & K & L --> M[Database]
+    M --> N[Logging System]
+```
 
 ## 📑 Table of Contents
 - [Features](#-features)
