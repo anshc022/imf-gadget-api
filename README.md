@@ -1,23 +1,12 @@
-```ascii
-  _____  __  __ _____    _____           _            _        _    _____ _____ 
- |_   _||  \/  |  ___]  / ____|         | |          | |      / \  |  __ \_   _|
-   | |  | \  / | |__   | |  __  __ _  __| | __ _  ___| |_    /   \ | |__) || |  
-   | |  | |\/| |  __|  | | |_ |/ _` |/ _` |/ _` |/ _ \ __|  / /_\ \|  ___/ | |  
-  _| |_ | |  | | |     | |__| | (_| | (_| | (_| |  __/ |_  / _____ \ |    _| |_ 
- |_____||_|  |_|_|      \_____|\__,_|\__,_|\__, |\___|\__|/_/     \_\_|   |_____|
-                                             __/ |                                  
-                                            |___/                                   
-```
+# IMF Gadget Management API 🕵️‍♂️
 
 [![Build Status](https://github.com/imf/gadget-api/actions/workflows/main.yml/badge.svg)](https://github.com/imf/gadget-api/actions)
 [![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://semver.org)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
-[![Security](https://img.shields.io/badge/SECURITY-MAX%20LEVEL-red.svg)](SECURITY.md)
-[![Mission Status](https://img.shields.io/badge/MISSION-ACTIVE-success.svg)](STATUS.md)
 
 📚 **API Documentation**: [Swagger UI](https://imf-gadget-api-ue70.onrender.com/api-docs/)
 
-> "Your mission, should you choose to accept it, is to manage the IMF's most sophisticated gadget inventory system."
+A sophisticated REST API for managing Mission: Impossible Force's gadget inventory system. Track, maintain, and control high-tech mission equipment with detailed specifications and maintenance schedules.
 
 ## 📑 Table of Contents
 - [System Flow](#-system-flow)
@@ -33,39 +22,26 @@
 - [Troubleshooting](#-troubleshooting)
 - [Contributing](#-contributing)
 
-## 📊 Mission Status Dashboard
-
-| Service Status | Database Health | Active Agents | Gadget Count |
-|---------------|----------------|---------------|--------------|
-| ✅ Operational | ✅ Connected    | 42 Online     | 156 Active   |
-
 ## 🔄 System Flow
 
 ```mermaid
-graph TB
-    subgraph "Mission Control"
-        A[Field Agent] -->|Authentication| B{Security Check}
-        B -->|Cleared| C[Command Center]
-        B -->|Denied| D[Self Destruct]
-    end
+graph LR
+    Client[Client Applications]
+    Auth[Authentication]
+    API[API Layer]
+    DB[(Database)]
+    Log[Logging System]
     
-    subgraph "Gadget Operations"
-        C --> E[Inventory Control]
-        C --> F[Maintenance Hub]
-        C --> G[Mission Assignment]
-    end
+    Client --> Auth
+    Auth --> API
+    API --> DB
+    API --> Log
     
-    subgraph "Data Vault"
-        E --> H[(Secure Database)]
-        F --> H
-        G --> H
-        H --> I[Audit Log]
+    subgraph Operations
+    API --- Gadgets[Gadget Operations]
+    API --- Users[User Management]
+    API --- Maintenance[Maintenance Tasks]
     end
-
-    style A fill:#ff9900
-    style B fill:#red
-    style C fill:#00ff00
-    style H fill:#0000ff
 ```
 
 ## 🚀 Features
@@ -255,22 +231,6 @@ X-RateLimit-Remaining: 95
 X-RateLimit-Reset: 1620000000
 ```
 
-## ⚡ Quick Start
-
-```bash
-# Clone the repository (This message will self-destruct in 5 seconds)
-git clone https://github.com/imf/gadget-api.git
-
-# Install dependencies (Clearance Level 3 Required)
-npm install --silent
-
-# Initialize the secure database
-npm run init:vault
-
-# Deploy to field operations
-npm run deploy:stealth
-```
-
 ## 🧖🏽‍♂️ Testing
 
 Run unit tests:
@@ -299,18 +259,6 @@ Run security tests:
   - Error logs: `logs/error.log`
   - Access logs: `logs/access.log`
 
-## 🎯 Mission Critical Features
-
-### 🔐 Security Clearance Levels
-
-| Level | Codename    | Access Rights                    |
-|-------|------------|----------------------------------|
-| 5     | DIRECTOR   | Full System Control              |
-| 4     | COMMANDER  | Operation Management             |
-| 3     | AGENT      | Field Operations                 |
-| 2     | TECHNICIAN | Maintenance & Support            |
-| 1     | RECRUIT    | Basic Access                     |
-
 ## 🚀 Deployment
 
 ### Docker Support
@@ -328,21 +276,6 @@ Build and run the project using Docker:
 - `DATABASE_URL` - PostgreSQL connection URL
 - `JWT_SECRET` - JWT signing key
 - `LOG_LEVEL` - Logging level
-
-## 🌍 Global Deployment Zones
-
-```mermaid
-graph LR
-    HQ[IMF HQ] --> EU(Europe Hub)
-    HQ --> AS(Asia Hub)
-    HQ --> NA(North America Hub)
-    
-    subgraph "Secure Zones"
-        EU --> EU_V[EU Vault]
-        AS --> AS_V[Asia Vault]
-        NA --> NA_V[NA Vault]
-    end
-```
 
 ## 🔧 Troubleshooting
 
