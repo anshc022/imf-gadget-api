@@ -1,27 +1,24 @@
 # IMF Gadget Management API 🕵️‍♂️
 
-[![Build Status](https://github.com/imf/gadget-api/actions/workflows/main.yml/badge.svg)](https://github.com/imf/gadget-api/actions)
-[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://semver.org)
-[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+[![Built for](https://img.shields.io/badge/Built%20for-Upraised%20Assignment-blue.svg)]()
+[![Role](https://img.shields.io/badge/Role-Backend%20Intern-orange.svg)]()
+[![Status](https://img.shields.io/badge/Status-Completed-success.svg)]()
 
-📚 **API Documentation**: [Swagger UI](https://imf-gadget-api-ue70.onrender.com/api-docs/)
+> This project was developed as part of the Upraised Backend Engineering Internship application process.
 
-A sophisticated REST API for managing Mission: Impossible Force's gadget inventory system. Track, maintain, and control high-tech mission equipment with detailed specifications and maintenance schedules.
+## 🎯 Assignment Overview
 
-## 📑 Table of Contents
-- [System Flow](#-system-flow)
-- [Features](#-features)
-- [Tech Stack](#-tech-stack)
-- [Prerequisites](#-prerequisites)
-- [Setup Instructions](#-setup-instructions)
-- [API Documentation](#-api-documentation)
-- [Examples](#-examples)
-- [Testing](#-testing)
-- [Maintenance](#️-maintenance)
-- [Deployment](#-deployment)
-- [Troubleshooting](#-troubleshooting)
-- [Contributing](#-contributing)
-- [Job Posting](#-job-posting)
+Built a sophisticated REST API for managing Mission: Impossible Force's gadget inventory system. This project demonstrates my backend development capabilities through:
+
+- RESTful API design
+- Database modeling
+- Authentication & Authorization
+- Clean code practices
+- API Documentation
+- Error handling
+- Testing implementation
+
+## 🔍 Technical Implementation
 
 ## 🔄 System Flow
 
@@ -44,6 +41,26 @@ graph LR
     API --- Maintenance[Maintenance Tasks]
     end
 ```
+
+## 🛠️ Tech Stack Used
+
+- **Backend**: Node.js, Express
+- **Database**: PostgreSQL, Sequelize ORM
+- **Authentication**: JWT, bcrypt
+- **Documentation**: Swagger/OpenAPI
+- **Testing**: Jest, Supertest
+- **Deployment**: Docker, Railway
+
+## 📝 Assignment Requirements Met
+
+✅ RESTful API Implementation
+✅ Database Integration
+✅ Authentication System
+✅ Documentation
+✅ Testing
+✅ Clean Code Practices
+✅ Error Handling
+✅ Deployment
 
 ## 🚀 Features
 
@@ -317,6 +334,18 @@ Common Issues:
    git push origin feature/amazing-feature
    ```
 5. Open a pull request!
+
+## 👤 Contact Information
+
+- **Name**: [Your Name]
+- **Email**: [Your Email]
+- **Phone**: [Your Phone]
+- **LinkedIn**: [Your LinkedIn Profile]
+- **GitHub**: [Your GitHub Profile]
+
+---
+
+💼 This project was completed as part of the Upraised Backend Engineering Internship application process.
 
 ## 🧑‍💻 Job Posting
 
