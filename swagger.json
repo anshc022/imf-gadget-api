@@ -1,0 +1,290 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "IMF Gadget API",
+    "version": "1.0.0",
+    "description": "API for managing IMF mission gadgets and equipment"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:5000",
+      "description": "Development server"
+    }
+  ],
+  "components": {
+    "securitySchemes": {
+      "bearerAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "JWT"
+      }
+    },
+    "schemas": {
+      "User": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string", "format": "uuid" },
+          "username": { "type": "string" },
+          "role": { "type": "string", "enum": ["admin", "agent", "technician"] }
+        }
+      },
+      "Gadget": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string", "format": "uuid" },
+          "name": { "type": "string" },
+          "status": { 
+            "type": "string",
+            "enum": ["Available", "Deployed", "Destroyed", "Decommissioned"]
+          },
+          "missionSuccessProbability": { "type": "string" },
+          "decommissionedAt": { "type": "string", "format": "date-time" },
+          "missionCount": {
+            "type": "integer",
+            "description": "Number of missions the gadget has been deployed on"
+          },
+          "lastMissionDate": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Date of the last mission"
+          },
+          "decommissionReason": {
+            "type": "string",
+            "description": "Reason for decommissioning the gadget"
+          }
+        }
+      }
+    }
+  },
+  "security": [
+    {
+      "bearerAuth": []
+    }
+  ],
+  "paths": {
+    "/users/register": {
+      "post": {
+        "tags": ["Auth"],
+        "summary": "Register new user",
+        "security": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": ["username", "password"],
+                "properties": {
+                  "username": { "type": "string" },
+                  "password": { "type": "string", "format": "password" },
+                  "role": { "type": "string", "enum": ["admin", "agent", "technician"] }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "User created successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "user": { "$ref": "#/components/schemas/User" },
+                    "token": { "type": "string" }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/users/login": {
+      "post": {
+        "tags": ["Auth"],
+        "summary": "Login user",
+        "security": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": ["username", "password"],
+                "properties": {
+                  "username": { "type": "string" },
+                  "password": { "type": "string", "format": "password" }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Login successful",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "user": { "$ref": "#/components/schemas/User" },
+                    "token": { "type": "string" }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/gadgets": {
+      "get": {
+        "tags": ["Gadgets"],
+        "summary": "Get all gadgets",
+        "responses": {
+          "200": {
+            "description": "List of gadgets",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": { "$ref": "#/components/schemas/Gadget" }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": ["Gadgets"],
+        "summary": "Add new gadget",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": ["name"],
+                "properties": {
+                  "name": { "type": "string" }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Gadget created",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/Gadget" }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/gadgets/{id}": {
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string",
+            "format": "uuid"
+          }
+        }
+      ],
+      "patch": {
+        "tags": ["Gadgets"],
+        "summary": "Update gadget",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "name": { "type": "string" },
+                  "status": { 
+                    "type": "string",
+                    "enum": ["Available", "Deployed", "Destroyed", "Decommissioned"]
+                  },
+                  "missionCount": {
+                    "type": "integer"
+                  },
+                  "lastMissionDate": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "decommissionReason": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Gadget updated",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/Gadget" }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": ["Gadgets"],
+        "summary": "Decommission gadget",
+        "responses": {
+          "200": {
+            "description": "Gadget decommissioned",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/Gadget" }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/gadgets/{id}/self-destruct": {
+      "post": {
+        "tags": ["Gadgets"],
+        "summary": "Initiate gadget self-destruct",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Self-destruct initiated",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "confirmationCode": { "type": "string" }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
