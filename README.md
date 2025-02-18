@@ -11,7 +11,7 @@
 ## 📚 Quick Links
 - **API Documentation**: https://imf-gadget-api-ue70.onrender.com/api-docs/
 - **Base URL**: https://imf-gadget-api-ue70.onrender.com
-- **GitHub Repository**: [View Code](https://github.com/yourusername/imf-gadget-api)
+- **GitHub Repository**: [View Code](https://github.com/anshc022/imf-gadget-api)
 
 ## 📑 Table of Contents
 - [Assignment Overview](#-assignment-overview)
@@ -43,52 +43,58 @@ Developed a sophisticated REST API for managing Mission: Impossible Force's gadg
 ## 🔄 System Architecture
 
 ```mermaid
-graph TD
-    subgraph Client Layer
-        Client[Client Applications]
-        Swagger[Swagger UI]
+flowchart TD
+    subgraph ClientLayer[Client Layer]
+        Client([Client Applications])
+        Swagger([Swagger UI])
     end
 
-    subgraph Security Layer
-        Auth[Authentication]
-        JWT[JWT Validation]
-        RBAC[Role-Based Access]
+    subgraph SecurityLayer[Security Layer]
+        Auth([Authentication])
+        JWT([JWT Validation])
+        RBAC([Role-Based Access])
     end
 
-    subgraph API Layer
-        Routes[API Routes]
-        Controllers[Controllers]
-        Services[Business Logic]
-        Validation[Data Validation]
+    subgraph APILayer[API Layer]
+        Routes([API Routes])
+        Controllers([Controllers])
+        Services([Business Logic])
+        Validation([Data Validation])
     end
 
-    subgraph Data Layer
-        Models[Data Models]
+    subgraph DataLayer[Data Layer]
+        Models([Data Models])
         DB[(PostgreSQL)]
         Cache[(Redis Cache)]
     end
 
-    subgraph Supporting Services
-        Logger[Logging System]
-        Monitor[Monitoring]
-        Backup[Backup Service]
+    subgraph Support[Supporting Services]
+        Logger([Logging System])
+        Monitor([Monitoring])
+        Backup([Backup Service])
     end
 
-    Client --> |HTTP Requests| Auth
-    Swagger --> |API Documentation| Client
-    Auth --> |Validates| JWT
-    JWT --> |Checks| RBAC
-    RBAC --> |Authorizes| Routes
-    Routes --> |Forwards| Controllers
-    Controllers --> |Uses| Services
-    Services --> |Validates| Validation
-    Services --> |Queries| Models
-    Models --> |Persists| DB
-    Models -.-> |Caches| Cache
+    Client -->|Requests| Auth
+    Swagger -->|Documents| Client
+    Auth -->|Validates| JWT
+    JWT -->|Checks| RBAC
+    RBAC -->|Authorizes| Routes
+    Routes -->|Forwards| Controllers
+    Controllers -->|Uses| Services
+    Services -->|Validates| Validation
+    Services -->|Queries| Models
+    Models -->|Persists| DB
+    Models -.->|Caches| Cache
     
-    Services --> |Logs| Logger
-    Monitor --> |Tracks| API Layer
-    Backup --> |Backs up| DB
+    Services -->|Logs| Logger
+    Monitor -->|Tracks| APILayer
+    Backup -->|Backs up| DB
+
+    style ClientLayer fill:#f9f,stroke:#333,stroke-width:2px
+    style SecurityLayer fill:#bbf,stroke:#333,stroke-width:2px
+    style APILayer fill:#bfb,stroke:#333,stroke-width:2px
+    style DataLayer fill:#fbb,stroke:#333,stroke-width:2px
+    style Support fill:#fff,stroke:#333,stroke-width:2px
 ```
 
 ### Component Overview
@@ -341,7 +347,7 @@ Ready to evaluate this mission's success? The gadgets await your inspection at o
 
 - 🔗 [Live Demo](https://imf-gadget-api-ue70.onrender.com)
 - 📚 [API Documentation](https://imf-gadget-api-ue70.onrender.com/api-docs)
-- 💻 [Source Code](https://github.com/yourusername/imf-gadget-api)
+- 💻 [Source Code](https://github.com/anshc022/imf-gadget-api)
 
 Contact the IMF Technical Division:
 - 📧 [Email](mailto:your.email@example.com)
@@ -353,10 +359,10 @@ Contact the IMF Technical Division:
 
 ## 👤 Contact Information
 
-- **Name**: [Your Name]
+- **Name**: Ansh Chaudhary
 - **Email**: [Your Email]
 - **LinkedIn**: [Your Profile]
-- **GitHub**: [Your GitHub]
+- **GitHub**: [anshc022](https://github.com/anshc022)
 - **Portfolio**: [Your Portfolio]
 
 ---
