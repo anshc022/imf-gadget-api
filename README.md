@@ -213,7 +213,7 @@ Authorization: Bearer <your_jwt_token>
 ### Installation Steps
 1. Clone repository
 ```sh
-git clone <repo_url>
+git clone https://github.com/anshc022/imf-gadget-api
 cd imf-gadget-api
 ```
 
