@@ -21,6 +21,7 @@ A sophisticated REST API for managing Mission: Impossible Force's gadget invento
 - [Deployment](#-deployment)
 - [Troubleshooting](#-troubleshooting)
 - [Contributing](#-contributing)
+- [Job Posting](#-job-posting)
 
 ## 🔄 System Flow
 
@@ -316,6 +317,74 @@ Common Issues:
    git push origin feature/amazing-feature
    ```
 5. Open a pull request!
+
+## 🧑‍💻 Job Posting
+
+# IMF Backend Engineer Position 🕵️‍♂️
+
+[![Status](https://img.shields.io/badge/Status-Active-success.svg)]()
+[![Location](https://img.shields.io/badge/Location-Bengaluru-blue.svg)]()
+[![Type](https://img.shields.io/badge/Type-Internship-yellow.svg)]()
+
+## 🎯 Mission Overview
+
+At IMF Tech Division, we're developing sophisticated gadget management systems that seamlessly integrate with existing field operations to help agents execute their missions efficiently.
+
+## 📍 Field Location
+- **Base**: HSR Layout, Bengaluru
+- **Type**: In-office internship
+- **Division**: Technical Operations
+
+## 🎭 Your Mission (Should You Choose to Accept It)
+
+### Primary Objectives
+- 🛠️ **System Development**: Design and implement new gadget management features
+- 💻 **Code Mastery**: Write efficient code in Node.js and TypeScript
+- 🗃️ **Data Operations**: Handle complex database operations (PostgreSQL)
+- 🤝 **Team Collaboration**: Work with field agents and tech specialists
+- ☁️ **Cloud Operations**: Deploy and maintain AWS infrastructure
+- 🔍 **Problem Solving**: Tackle mission-critical technical challenges
+
+### Technical Requirements (Agent Qualifications)
+- 🚀 Strong passion for covert tech operations
+- 💡 Proficiency in Node.js and TypeScript/Javascript
+- 📊 Experience with PostgreSQL and database operations
+- 🧩 Advanced problem-solving capabilities
+- 📡 Excellent communication skills
+- ⭐ Bonus Expertise: Elasticsearch, Redis, AWS
+
+## 🎓 Training Program
+
+### Phase 1: Initial Assessment
+- Complete technical evaluation mission
+- Submit mission dossier (resume)
+- Provide field experience letter (cover letter)
+
+### Phase 2: Field Integration
+- Join elite tech division
+- Hands-on mission training
+- Real-world operation exposure
+
+## 📋 Application Protocol
+
+1. **Mission Assignment**: Complete the coding challenge
+2. **Documentation**: Submit your:
+   - Completed assignment
+   - Agent profile (resume)
+   - Mission statement (cover letter)
+
+## 🔒 Security Clearance Process
+
+Selected agents will undergo:
+- Technical assessment
+- Background verification
+- Team compatibility evaluation
+
+---
+
+*This message will NOT self-destruct. We maintain high standards in documentation.*
+
+[Apply Now](mailto:recruitment@imf-tech.com) | [View Assignment](https://assignment-url.com)
 
 ---
 
