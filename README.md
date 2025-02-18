@@ -417,7 +417,28 @@ console.log("Mission Status:", "Ready to Code! 🚀");
 - **Email**: [Your Email]
 - **LinkedIn**: [Your Profile]
 - **GitHub**: [anshc022](https://github.com/anshc022)
-- **Portfolio**: [Your Portfolio]
+- **Portfolio Status**: 
+```javascript
+try {
+    throw new Error(`
+        🚧 Portfolio under construction! 🏗️
+        
+        While my official portfolio is being crafted with the same care
+        as this API, you can check out my work in action:
+        
+        → This project itself (a living portfolio piece!)
+        → My GitHub repositories
+        → My practical problem-solving approach
+        
+        Status: Building something awesome() 
+        ETA: Coming soon™
+        
+        return "Let my code speak for itself! 💻"
+    `);
+} catch (portfolioStatus) {
+    console.log("Currently letting my projects do the talking!");
+}
+```
 
 ---
 
