@@ -4,7 +4,14 @@
 [![Role](https://img.shields.io/badge/Role-Backend%20Intern-orange.svg)]()
 [![Status](https://img.shields.io/badge/Status-Completed-success.svg)]()
 
+🔗 **Live API Documentation**: [Swagger UI](https://imf-gadget-api-ue70.onrender.com/api-docs/)
+
 > This project was developed as part of the Upraised Backend Engineering Internship application process.
+
+## 📚 Quick Links
+- **API Documentation**: https://imf-gadget-api-ue70.onrender.com/api-docs/
+- **Base URL**: https://imf-gadget-api-ue70.onrender.com
+- **GitHub Repository**: [View Code](https://github.com/yourusername/imf-gadget-api)
 
 ## 📑 Table of Contents
 - [Assignment Overview](#-assignment-overview)
@@ -102,8 +109,8 @@ graph LR
 ## 📚 API Documentation
 
 ### Base URLs
-- **Production**: https://imf-gadget-api.com
-- **Documentation**: [Swagger UI](https://imf-gadget-api-ue70.onrender.com/api-docs/)
+- **Live API**: https://imf-gadget-api-ue70.onrender.com
+- **Swagger UI**: https://imf-gadget-api-ue70.onrender.com/api-docs/
 - **Development**: http://localhost:5000
 
 ### Authentication
