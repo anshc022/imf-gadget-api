@@ -13,7 +13,7 @@ const swaggerOptions = {
     },
     servers: [
       {
-        url: 'http://localhost:5000',
+        url: 'https://imf-gadget-api-ue70.onrender.com/api-docs/#/Auth/post_users_register',
         description: 'Development server'
       }
     ],
